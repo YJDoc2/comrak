@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
-    # run  either when pull request is opened or when comment body (only on pr) is /run-bench
+    # run either when pull request is opened or when comment body (only on pr) is /run-bench
     if: (github.event_name == 'pull_request') || ((github.event.issue.pull_request != null) && github.event.comment.body == '/run-bench')
     steps:
       - uses: actions/checkout@v3
