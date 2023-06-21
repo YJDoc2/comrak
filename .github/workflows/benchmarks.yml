@@ -24,3 +24,9 @@ jobs:
         run: cargo install hyperfine
       - name: Install cmake
         run: apt update && apt install cmake -y
+      - name: Run Benchmarks
+        run: make bench-all
+      - name: Post result comment
+        uses: mshick/add-pr-comment@v2
+        with:
+          message-path: bench-output.md
