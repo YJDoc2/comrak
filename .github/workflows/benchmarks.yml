@@ -12,7 +12,7 @@ on:
 jobs:
   run_benchmarks:
     runs-on: ubuntu-latest
-    # run either when pull request is opened or when comment body (only on pr) is /run-bench
+    # run  either when pull request is opened or when comment body (only on pr) is /run-bench
     if: (github.event_name == 'pull_request') || ((github.event.issue.pull_request != null) && github.event.comment.body == '/run-bench')
     steps:
       - uses: actions/checkout@v3
