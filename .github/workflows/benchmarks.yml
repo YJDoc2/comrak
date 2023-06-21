@@ -12,6 +12,8 @@ on:
 jobs:
   run_benchmarks:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     # run  either when pull request is opened or when comment body (only on pr) is /run-bench
     if: (github.event_name == 'pull_request') || ((github.event.issue.pull_request != null) && github.event.comment.body == '/run-bench')
     steps:
@@ -24,6 +26,8 @@ jobs:
         run: cargo install hyperfine
       - name: Install cmake
         run: sudo apt-get update && sudo apt-get install cmake -y
+      - name: Build Binaries
+        run: make binaries
       - name: Run Benchmarks
         run: make bench-all
       - name: Post result comment
