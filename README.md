@@ -1,5 +1,6 @@
 # Comrak
 
+
 [![Build Status](https://github.com/kivikakk/comrak/actions/workflows/rust.yml/badge.svg)](https://github.com/kivikakk/comrak/actions/workflows/rust.yml) ![Spec
 Status: 671/671](https://img.shields.io/badge/specs-671%2F671-brightgreen.svg) [![Financial Contributors on Open
 Collective](https://opencollective.com/comrak/all/badge.svg?label=financial+contributors)](https://opencollective.com/comrak)
